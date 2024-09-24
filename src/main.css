@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-family: "Roboto", Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    --green-primary: #66bb6a;
+    --green-secondary: #43a047;
+    --orange-primary: #e46a14;
+    --gray-primary: #d2d4e1;
+    --blue-primary: #295cff;
+    --blue-mint: #90e0df;
+    --blue-gray: ##f4fcfc;
+    --blue-secondary: #1d4ce6;
+    --blue-tertiary: #3fafff;
+  
+    --white: rgba(255, 255, 255, 1);
+    --white-secondary: rgba(255, 255, 255, 0.6);
+    --gray-border: #ffffff26;
+    --gray-text: rgb(71, 71, 71);
+    --black-green: #1d251e;
+    --black-green-secondary: rgb(14, 32, 15);
+    --black: #33363f;
+  
+    --gradient: linear-gradient(
+      45deg,
+      #27d3e150,
+      #00bfff50,
+      #39ff1450,
+      #32cd3250,
+      #ffff0050,
+      #ffa50050,
+      #ef476f50
+    );
+
+    --background-gradient: linear-gradient(
+      135deg,
+      #203d7b,
+       #5b71a5
+
+    );
+
+    -icon-background: linear-gradient (
+        45 deg,
+        #fff,
+        #295cff
+    );
+  
+    color-scheme: light dark;
+    /* background-color: var(--black-green); */
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+ h3 {
+  font-weight: 500;
+ }
+
+  a,
+  a:visited {
+    font-weight: 500;
+    color: var(--white);
+    text-decoration: inherit;
+  }
+  
+  a:hover {
+    color: var(--blue-tertiary);
+  }
+  
+  /* Notice that this is the class 'active', not the pseudo-class a:active. This is accounting for NavLinks which add an 'active' class but does not natively integrate with modular css */
+  a.active {
+    background: rgba(255, 255, 255, 0.1);
+  }
+
+  button {
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    border-radius: 6px;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+  }
+  
+  body {
+    margin: 0;
+    min-width: 320px;
+    width: 100vw;
+    overflow-x: hidden;
+    background: var(--background-gradient);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: var(--black);
+
+  }
+  
+.header {
+  position: absolute;
+  top: 0;
+  margin-top: 5rem;
+  color: white;
+}
+
+  .app {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    height: 100vh;
+  }
+  @media screen and (max-width: 800px) {
+   .app {
+    flex-direction: column;
+    }
+  }
+
+
+  .inputForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 450px;
+    height: 450px;
+    background: #fff;
+    border-radius: 12px;
+    padding: 1rem;
+    border: none;
+  }
+
+.textArea {
+    height: 64%;
+    width: 100%;
+    font-family: monospace;
+    resize: none;
+    border: 1px solid var(--gray-primary);
+    border-radius: 8px;
+    padding: 1rem;
+}
+
+.cta {
+  width: 100%;
+  background: var(--blue-primary);
+  color: var(--white);
+  height: 3rem;
+  transition: all ease .5s;
+}
+
+.cta:hover {
+  background: var(--blue-secondary);
+}
+
+.output {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 450px;
+  height: 450px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 1rem;
+  line-height: 1.8;
+}
+
+.outputList {
+  height: 80vh;
+  overflow-y: scroll;
+  /* background: rgb(229, 229, 229); */
+  color: black;
+
+  width: 100%;
+  /* font-family: monospace; */
+  resize: none;
+  border: 1px solid var(--gray-primary);
+  border-radius: 8px;
+  padding: 1rem;
+  list-style: none;
+}
